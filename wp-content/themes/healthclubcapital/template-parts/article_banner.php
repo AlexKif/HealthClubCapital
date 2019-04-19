@@ -1,0 +1,1 @@
+<a href="#"><img src="<?php echo bloginfo('template_url'); ?>/img/banner-1.jpg" alt="banner-1" class="first-article__banner"/></a>

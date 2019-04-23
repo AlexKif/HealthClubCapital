@@ -26,14 +26,16 @@ if ( $query->have_posts() ) {
         <?php $post_not_in[] = $post->ID; ?>
         <article id="banner-box" class="banner-box">
         <a href="<?php the_permalink() ?>" class="banner-link" style="background-image: url('<?php echo $thumb['0']; ?>')">
-            <div class="wrap banner-wrap">
-                <p class="category-headline banner-title"><?php echo get_the_category()[0]->cat_name; ?></p>
-                <h2 class="banner-headline"><?php the_title(); ?></h2>
-                <div class="first-article__author banner-author">
-                    <span class="first-article__author-name"><?php the_author(); ?></span>
-                    <span class="first-article__author-date"><?php echo get_the_date('d/m/y');?></span>
-                </div>
+            <div class="banner-hov">
+                <div class="wrap banner-wrap">
+                    <p class="category-headline banner-title"><?php echo get_the_category()[0]->cat_name; ?></p>
+                    <h2 class="banner-headline"><?php the_title(); ?></h2>
+                    <div class="first-article__author banner-author">
+                        <span class="first-article__author-name"><?php the_author(); ?></span>
+                        <span class="first-article__author-date"><?php echo get_the_date('d/m/y');?></span>
+                    </div>
 
+                </div>
             </div>
         </a>
         </article>

@@ -21,20 +21,23 @@
             $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
             ?>
             <a href="<?php the_permalink() ?>" class="top-box">
-                <div class="top-box-text">
-                    <p class="top-box__title"><?php echo get_the_category()[0]->cat_name; ?></p>
-                    <h3 class="top-box__headline"><?php the_title(); ?></h3>
-                    <div class="aside-small-post__author top-box__author">
-                        <span class="aside-small-post__author-name top-box__author-name"><?php the_author(); ?></span>
-                        <span class="aside-small-post__author-date top-box__author-date"><?php echo get_the_date('d/m/y'); ?></span>
+                <div class="top-box-hov">
+                    <div class="top-box-text">
+                        <p class="top-box__title"><?php echo get_the_category()[0]->cat_name; ?></p>
+                        <h3 class="top-box__headline"><?php the_title(); ?></h3>
+                        <div class="aside-small-post__author top-box__author">
+                            <span class="aside-small-post__author-name top-box__author-name"><?php the_author(); ?></span>
+                            <span class="aside-small-post__author-date top-box__author-date"><?php echo get_the_date('d/m/y'); ?></span>
+                        </div>
+                    </div>
+                    <div class="top-box-wrap">
+                        <?php $attr = array(
+                            'class' => "top-box__photo",
+                        );
+                        the_post_thumbnail(array(380, 280), $attr);
+                        ?>
                     </div>
                 </div>
-
-                <?php $attr = array(
-                    'class' => "top-box__photo",
-                );
-                the_post_thumbnail(array(380, 280), $attr);
-                ?>
             </a>
             <?php
         }
